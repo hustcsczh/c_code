@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include<string.h>
 float max(int c ,int d)
 {
     return c + d;    //return 里面是整形,返回值类型以函数定义时为标准；
@@ -23,10 +24,14 @@ int main()
     printf("11.0\t%d\t%d\n", -15 >> 3,1>>1);   // 结果为-2说明我的电脑负数右移高位补1;//所以右移通常为无符号数字
     printf("12.0\t%f\n", (float)5 / 2);     //5.00000/2  ->2.500000
     printf("13.0\t%f\n", (float)(5 / 2));     //  (float)2->2.000000
+    //                \\表示转义，代表一个 \ 反斜杠
+    char t[] = {"\\jsbhd\\"};
+    printf("%d\t%d\n", strlen(t),sizeof(t));
+    printf("%s\n", t);
 }
 /*
-1.关键字
-2.标识符
+1.关键字   https://zhuanlan.zhihu.com/p/37908790
+2.标识符   https://blog.csdn.net/songsongssssong/article/details/108823165
 3.指数形式可以无小数点  10E(e)2   2.1E4  2.E4  2E4
 4.转移序列，字符常量   'a'   '&'   \n  \t   '和\ 只能用转移序列打印  \'单引号    \\反斜杠
 5.优先级   单目>双目    所有+ -  都是同一优先级  ++ -- + -
